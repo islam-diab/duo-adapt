@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/banner.png" alt="duo-adapt: Flutter apps on iPhone Duo, foldables and tablets, with the phone layout unchanged" width="100%">
-</p>
+![duo-adapt: Flutter apps on iPhone Duo, foldables and tablets, with the phone layout unchanged](assets/banner.png)
 
 # duo-adapt
 
@@ -77,6 +75,16 @@ You can also run the skill directly: `/duo-adapt` (listed as `duo-adapt:duo-adap
 - Flutter 3.41 or newer (3.47.5 is the version that builds with Xcode 27.1) and Dart 3.0 or newer.
 - A git repository, because the reviews read `git diff`.
 - For the iOS checks: Xcode 27.1 with the iPhone Duo simulator.
+
+## What it runs and changes
+
+duo-adapt works only inside the Flutter project you open it in, through Claude Code's normal tools and your permission settings.
+
+- **Reads:** your project's code, configuration and git history.
+- **Changes:** files in your project only: `lib/`, `test/`, iOS settings such as `Info.plist` (UIScene and orientations, plus iPad support only with your approval), and its own `duo-plan.md`. It never commits or pushes unless you ask.
+- **Runs:** `flutter analyze`, `flutter test`, `flutter build ios --simulator`, `dart format` and `dart fix` on the files it changed, read-only `git` commands, and `xcrun simctl` for the simulator checks. The template test script creates a throwaway Flutter project in a temporary folder.
+- **Network:** only Flutter's own package downloads from pub.dev. A new package, such as the bridge that reports the fold on iOS, is added only after you approve it.
+- **Data:** it collects nothing and sends nothing anywhere.
 
 ## What's inside
 
