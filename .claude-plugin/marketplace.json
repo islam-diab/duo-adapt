@@ -1,0 +1,27 @@
+{
+  "name": "duo-adapt",
+  "owner": {
+    "name": "islam-diab",
+    "url": "https://github.com/islam-diab"
+  },
+  "metadata": {
+    "description": "duo-adapt: adapt Flutter apps for iPhone Duo, foldables and tablets."
+  },
+  "plugins": [
+    {
+      "name": "duo-adapt",
+      "source": "./",
+      "description": "Adapt any Flutter app for iPhone Duo, foldables and tablets without changing the phone layout: one skill, three agents (planner, executor, reviewer) and a tested adaptive core layer.",
+      "version": "1.0.0",
+      "author": {
+        "name": "islam-diab",
+        "url": "https://github.com/islam-diab"
+      },
+      "homepage": "https://github.com/islam-diab/duo-adapt",
+      "repository": "https://github.com/islam-diab/duo-adapt",
+      "license": "MIT",
+      "keywords": ["flutter", "iphone-duo", "foldables", "tablets", "adaptive-layout", "ios", "agents"],
+      "category": "development"
+    }
+  ]
+}
